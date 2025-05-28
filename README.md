@@ -10,7 +10,6 @@ Para iniciar la aplicacion se sigue los sigueitnes pasos:
 1. Clonar el repositorio de git hub:
    ```
    git clone https://github.com/JustinLucero07/ExamenIntercicloSistemas.git
-   ```
    cd ExamenIntercicloSistemas
    ```
 
