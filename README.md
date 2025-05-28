@@ -12,10 +12,13 @@ Para iniciar la aplicacion se sigue los sigueitnes pasos:
    git clone https://github.com/JustinLucero07/ExamenIntercicloSistemas.git
    cd ExamenIntercicloSistemas
    ```
-
-2. Una vez dentro de la carpeta en donde se encuentra el Docker Compose:
+2. Ingresar en la carpeta de appangular y ejecutar
+   ```
+   ng build
+   ```
+3. Una vez dentro de la carpeta en donde se encuentra el Docker Compose:
    ```
    docker-compose up
    ```
 
-3. Abrir la url `http://localhost:80` y se inicara la aplicacion en Angular.
+4. Abrir la url `http://localhost:80` y se inicara la aplicacion en Angular.
