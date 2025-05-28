@@ -1,18 +1,7 @@
-FROM node:14 AS build
+FROM nginx:alpine
 
-WORKDIR /app
+RUN rm -rf /usr/share/nginx/html/*
 
-COPY package.json ./
-COPY angular.json ./
-COPY src ./src
-
-RUN npm install
-RUN npm run build --prod
-
-FROM httpd:2.4
-
-COPY --from=build /app/dist/appangular /usr/local/apache2/htdocs/ 
+COPY /dist/appangular/browser /usr/share/nginx/html
 
 EXPOSE 80
-
-CMD ["httpd-foreground"]

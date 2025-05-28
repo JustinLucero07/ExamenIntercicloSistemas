@@ -1,21 +1,23 @@
 const WebSocket = require('ws');
+const wss = new WebSocket.Server({ port: 3000 });
 
-const server = new WebSocket.Server({ port: 8080 });
-
-server.on('connection', (socket) => {
-    console.log('New client connected');
-
+wss.on('connection', ws => {
     const sendMessage = () => {
-        const message = `Hello from WebSocket server! Time: ${new Date().toLocaleTimeString()}`;
-        socket.send(message);
+        const message = `Hola desde websocket: ${new Date().toLocaleTimeString()}`;
+        ws.send(message);
     };
 
     const intervalId = setInterval(sendMessage, 3000);
 
-    socket.on('close', () => {
-        console.log('Client disconnected');
+    ws.send('Bienvenido al servidor WebSocket');
+    ws.on('message', message => {
+        ws.send(`Echo: ${message}`);
+    });
+
+    ws.on('close', () => {
+        console.log('Cliente desconectado');
         clearInterval(intervalId);
     });
 });
 
-console.log('WebSocket server is running on ws://localhost:8080');
+console.log('WebSocket corriendo en ws://localhost:3000');

@@ -14,13 +14,13 @@ export class AppComponent {
   messages: string[] = [];
   private socket: WebSocket | undefined;
   constructor() {
-    this.connectWebSocket();
+    this.conectarWebSocket();
   }
-  connectWebSocket() {
-    this.socket = new WebSocket('ws://localhost:3000'); 
+  conectarWebSocket() {
+    this.socket = new WebSocket('ws://localhost:3000');
 
     this.socket.onopen = () => {
-      console.log('WebSocket connection established');
+      console.log('WebSocket conexion establecida');
     };
 
     this.socket.onmessage = (event) => {
@@ -28,7 +28,7 @@ export class AppComponent {
     };
 
     this.socket.onclose = () => {
-      console.log('WebSocket connection closed');
+      console.log('WebSocket conexion cerrada');
     };
 
     this.socket.onerror = (error) => {

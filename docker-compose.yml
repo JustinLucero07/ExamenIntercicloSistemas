@@ -1,10 +1,10 @@
 version: '3.8'
 
 services:
-  angular-app:
+  appangular:
     build:
       context: ./appangular
-      dockerfile: Dockerfile
+    container_name: appangular
     ports:
       - "80:80"
     depends_on:
@@ -13,6 +13,5 @@ services:
   websocket-service:
     build:
       context: ./websocket-service
-      dockerfile: Dockerfile
     ports:
       - "3000:3000"

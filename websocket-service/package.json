@@ -1,7 +1,7 @@
 {
   "name": "websocket-service",
   "version": "1.0.0",
-  "description": "WebSocket service for real-time communication with Angular application",
+  "description": "websocket y angular",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
