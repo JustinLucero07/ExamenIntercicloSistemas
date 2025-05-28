@@ -3,7 +3,7 @@ version: '3.8'
 services:
   angular-app:
     build:
-      context: ./angular-app
+      context: ./appangular
       dockerfile: Dockerfile
     ports:
       - "80:80"
