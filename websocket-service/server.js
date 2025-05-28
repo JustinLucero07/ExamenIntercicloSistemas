@@ -7,7 +7,7 @@ wss.on('connection', ws => {
         ws.send(message);
     };
 
-    const intervalId = setInterval(sendMessage, 3000);
+    const intervalId = setInterval(sendMessage, 2000);
 
     ws.send('Bienvenido al servidor WebSocket');
     ws.on('message', message => {
