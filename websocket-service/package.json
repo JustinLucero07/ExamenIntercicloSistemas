@@ -1,0 +1,14 @@
+{
+  "name": "websocket-service",
+  "version": "1.0.0",
+  "description": "WebSocket service for real-time communication with Angular application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
